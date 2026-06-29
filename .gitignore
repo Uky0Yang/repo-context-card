@@ -1,0 +1,14 @@
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.venv/
+venv/
+dist/
+build/
+*.egg-info/
+*.pyc
+CONTEXT_CARD.md
+context-card.json
+.DS_Store
+Thumbs.db
