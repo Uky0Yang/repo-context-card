@@ -1,5 +1,7 @@
 # repo-context-card
 
+New: `--check` detects stale cards without rewriting files. [Usage and examples](docs/maintenance-2026-09.md).
+
 Generate a compact repository context card for AI coding agents.
 
 `repo-context-card` is a dependency-free Python CLI that scans a repository and emits a deterministic Markdown or JSON summary: important files, language mix, likely validation commands, a compact file map, and largest scanned files.

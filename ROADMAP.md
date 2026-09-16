@@ -2,10 +2,10 @@
 
 ## Near Term
 
+Implemented in v0.2.0: read-only `--check`, portable saved cards and a pre-commit hook.
+
 - Add TOML configuration
-- Add pre-commit hook documentation
 - Add richer command detection for uv, poetry, pnpm, bun, make, just, and task
-- Add `--check` mode for CI
 - Publish to PyPI
 
 ## Mid Term

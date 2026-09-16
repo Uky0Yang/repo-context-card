@@ -1,0 +1,6 @@
+- id: repo-context-card
+  name: Check repository context card
+  entry: repo-context-card . --output CONTEXT_CARD.md --check
+  language: python
+  pass_filenames: false
+  always_run: true

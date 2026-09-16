@@ -103,9 +103,9 @@ class RepoContext:
         }
 
 
-def scan_repo(root: Path, max_files: int = 200, max_tree_entries: int = 80) -> RepoContext:
+def scan_repo(root: Path, max_files: int = 200, max_tree_entries: int = 80, exclude: Path | None = None) -> RepoContext:
     root = root.resolve()
-    files = list(iter_files(root, max_files=max_files))
+    files = list(iter_files(root, max_files=max_files, exclude=exclude))
     language_counts: dict[str, int] = {}
     important = find_important_files(root, files)
     total_bytes = 0
@@ -135,13 +135,13 @@ def scan_repo(root: Path, max_files: int = 200, max_tree_entries: int = 80) -> R
     )
 
 
-def iter_files(root: Path, max_files: int) -> Iterable[Path]:
+def iter_files(root: Path, max_files: int, exclude: Path | None = None) -> Iterable[Path]:
     count = 0
     for current_root, dirs, files in os.walk(root):
         dirs[:] = sorted(directory for directory in dirs if directory not in IGNORE_DIRS)
         for name in sorted(files):
             path = Path(current_root) / name
-            if should_ignore_file(path):
+            if should_ignore_file(path) or (exclude is not None and path.resolve() == exclude.resolve()):
                 continue
             yield path
             count += 1
