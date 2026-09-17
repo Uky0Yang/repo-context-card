@@ -6,7 +6,7 @@ Implemented in v0.2.0: read-only `--check`, portable saved cards and a pre-commi
 
 - Add TOML configuration
 - Add richer command detection for uv, poetry, pnpm, bun, make, just, and task
-- Publish to PyPI
+- Published to [PyPI](https://pypi.org/project/repo-context-card/0.2.0/) as v0.2.0
 
 ## Mid Term
 

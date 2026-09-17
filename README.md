@@ -14,7 +14,13 @@ This project is intentionally small: create a readable `CONTEXT_CARD.md` that an
 
 ## Install
 
-From this repository:
+Install from [PyPI](https://pypi.org/project/repo-context-card/):
+
+```bash
+python -m pip install repo-context-card
+```
+
+For development, from a checkout of this repository:
 
 ```bash
 python -m pip install -e .
